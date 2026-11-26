@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kuntur Mobile | Celulares originales en Huancayo, Lima y todo el Perú</title>
+  <meta name="description" content="Celulares 100% originales con garantía, envío a todo el Perú, pago con Yape, Plin o tarjeta en cuotas. Tiendas en Huancayo y Lima.">
+  <meta name="theme-color" content="#07070b">
+  <meta property="og:title" content="Kuntur Mobile | Celulares originales">
+  <meta property="og:description" content="Garantía real, envío a todo el Perú y atención por WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Pantalla de carga -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__logo"><span class="logo-mark"></span>KUNTUR</div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <div class="progress" id="progress"></div>
+
+  <!-- Navegación -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="brand" aria-label="Kuntur Mobile, inicio">
+      <span class="logo-mark"></span><span class="brand__name">KUNTUR<b>mobile</b></span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#destacado">Destacado</a>
+      <a href="#canje">Plan Canje</a>
+      <a href="#tiendas">Tiendas</a>
+      <a href="#preguntas">Ayuda</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="cart-btn" id="cartOpen" aria-label="Ver mi pedido">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-btn__count" id="cartCount">0</span>
+      </button>
+      <a class="btn btn--wa btn--sm hide-sm" data-wa="Hola Kuntur Mobile, quiero información sobre un celular." href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg">
+        <div class="orb orb--1"></div><div class="orb orb--2"></div><div class="orb orb--3"></div>
+        <div class="grid-lines"></div>
+      </div>
+      <div class="hero__inner container">
+        <div class="hero__copy">
+          <p class="eyebrow reveal"><span class="dot"></span> Nuevos ingresos · Noviembre 2026</p>
+          <h1 class="hero__title">
+            <span class="line"><span>El futuro</span></span>
+            <span class="line"><span>cabe en tu <em class="grad">mano.</em></span></span>
+          </h1>
+          <p class="hero__lead reveal">Celulares 100% originales con garantía real, envío a todo el Perú en 24 a 72 horas y pago con Yape, Plin o hasta 12 cuotas sin intereses.</p>
+          <div class="hero__cta reveal">
+            <a href="#catalogo" class="btn btn--primary magnetic">Ver catálogo <span class="arrow">→</span></a>
+            <a href="#" class="btn btn--ghost magnetic" data-wa="Hola Kuntur Mobile, quiero que un asesor me ayude a elegir un celular.">Hablar con un asesor</a>
+          </div>
+          <ul class="hero__stats reveal">
+            <li><b data-count="18500" data-suffix="+">0</b><span>clientes felices</span></li>
+            <li><b data-count="24" data-suffix=" h">0</b><span>envío a Lima y Huancayo</span></li>
+            <li><b data-count="12" data-suffix=" meses">0</b><span>de garantía</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__stage" id="heroStage">
+          <div class="halo"></div>
+          <div class="phone3d" id="heroPhone"></div>
+          <div class="float-card float-card--a">
+            <span class="fc-ico">⚡</span>
+            <div><b>Carga 45W</b><small>0 a 70% en 30 min</small></div>
+          </div>
+          <div class="float-card float-card--b">
+            <span class="fc-ico">📷</span>
+            <div><b>200 MP</b><small>Zoom óptico 5x</small></div>
+          </div>
+          <div class="float-card float-card--c">
+            <div class="stars">★★★★★</div><small>4.9 en Google · 2,340 reseñas</small>
+          </div>
+        </div>
+      </div>
+      <a href="#catalogo" class="scroll-hint" aria-label="Bajar"><span></span></a>
+    </section>
+
+    <!-- MARCAS -->
+    <div class="marquee" aria-label="Marcas disponibles">
+      <div class="marquee__track">
+        <span>Apple</span><span>Samsung</span><span>Xiaomi</span><span>Motorola</span><span>Honor</span><span>OPPO</span><span>vivo</span><span>realme</span><span>Google Pixel</span>
+        <span>Apple</span><span>Samsung</span><span>Xiaomi</span><span>Motorola</span><span>Honor</span><span>OPPO</span><span>vivo</span><span>realme</span><span>Google Pixel</span>
+      </div>
+    </div>
+
+    <!-- CATÁLOGO -->
+    <section class="section catalog" id="catalogo">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Catálogo</p>
+          <h2 class="section__title reveal">Elige el tuyo.<br><span class="muted">Te lo llevamos a casa.</span></h2>
+        </div>
+        <div class="filters reveal" id="filters" role="tablist">
+          <button class="chip is-active" data-filter="all">Todos</button>
+          <button class="chip" data-filter="apple">Apple</button>
+          <button class="chip" data-filter="samsung">Samsung</button>
+          <button class="chip" data-filter="xiaomi">Xiaomi</button>
+          <button class="chip" data-filter="motorola">Motorola</button>
+          <button class="chip" data-filter="honor">Honor</button>
+          <span class="filters__sep"></span>
+          <button class="chip chip--alt" data-filter="oferta">🔥 Ofertas</button>
+        </div>
+        <div class="products" id="products"></div>
+        <p class="note">Precios e imágenes de ejemplo para esta demostración.</p>
+      </div>
+    </section>
+
+    <!-- SHOWCASE CON SCROLL -->
+    <section class="showcase" id="destacado">
+      <div class="showcase__sticky">
+        <div class="showcase__bigword" id="bigWord">ULTRA</div>
+        <div class="container showcase__grid">
+          <div class="showcase__steps" id="steps">
+            <article class="step is-active">
+              <span class="step__n">01</span>
+              <h3>Galaxy S25 Ultra</h3>
+              <p>El más potente de la temporada. Lo sentirás desde el primer toque.</p>
+              <div class="step__price">S/ 4,899 <small>o 12 cuotas de S/ 408</small></div>
+            </article>
+            <article class="step">
+              <span class="step__n">02</span>
+              <h3>Cámara de 200 MP</h3>
+              <p>Fotos nítidas de noche en la Plaza Constitución o en el malecón de Miraflores. Zoom óptico 5x.</p>
+            </article>
+            <article class="step">
+              <span class="step__n">03</span>
+              <h3>Batería para todo el día</h3>
+              <p>5,000 mAh y carga rápida de 45W. Sale de casa al 100% y vuelve con batería.</p>
+            </article>
+            <article class="step">
+              <span class="step__n">04</span>
+              <h3>Titanio resistente</h3>
+              <p>Marco de titanio y vidrio Gorilla Armor. Incluye protector y case de regalo.</p>
+              <a href="#" class="btn btn--primary" data-wa="Hola Kuntur Mobile, quiero el Galaxy S25 Ultra que vi en la web.">Lo quiero <span class="arrow">→</span></a>
+            </article>
+          </div>
+          <div class="showcase__stage">
+            <div class="ring"></div>
+            <div class="phone3d phone3d--big" id="showPhone"></div>
+            <div class="spec-tags" id="specTags">
+              <span class="spec" data-step="1">200 MP</span>
+              <span class="spec" data-step="1">Zoom 5x</span>
+              <span class="spec" data-step="2">5,000 mAh</span>
+              <span class="spec" data-step="2">45W</span>
+              <span class="spec" data-step="3">Titanio</span>
+            </div>
+          </div>
+        </div>
+        <div class="showcase__dots" id="stepDots"><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="section perks">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Por qué Kuntur</p>
+          <h2 class="section__title reveal">Comprar un celular<br><span class="muted">debería ser así de fácil.</span></h2>
+        </div>
+        <div class="bento">
+          <div class="bento__item bento__item--wide reveal tilt">
+            <div class="bento__ico">🚚</div>
+            <h3>Envío a todo el Perú</h3>
+            <p>Lima y Huancayo en 24 horas. Provincias en 48 a 72 horas por Olva o Shalom, con seguimiento en tiempo real.</p>
+            <div class="route">
+              <span>Lima</span><i></i><span>Huancayo</span><i></i><span>Arequipa</span><i></i><span>Cusco</span>
+            </div>
+          </div>
+          <div class="bento__item reveal tilt">
+            <div class="bento__ico">🛡️</div>
+            <h3>100% originales</h3>
+            <p>Equipos sellados, con IMEI registrado ante OSIPTEL y boleta o factura electrónica.</p>
+          </div>
+          <div class="bento__item reveal tilt">
+            <div class="bento__ico">💳</div>
+            <h3>Paga como quieras</h3>
+            <p>Yape, Plin, transferencia, contra entrega o tarjeta en cuotas.</p>
+            <div class="pay"><span>Yape</span><span>Plin</span><span>Visa</span><span>BCP</span></div>
+          </div>
+          <div class="bento__item reveal tilt">
+            <div class="bento__ico">🔧</div>
+            <h3>Garantía de 12 meses</h3>
+            <p>Servicio técnico propio en nuestras tiendas. Si falla, te prestamos uno mientras lo reparamos.</p>
+          </div>
+          <div class="bento__item bento__item--accent reveal tilt">
+            <div class="big-num"><b data-count="98" data-suffix="%">0</b></div>
+            <p>de nuestros clientes nos vuelve a comprar o nos recomienda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAN CANJE -->
+    <section class="section trade" id="canje">
+      <div class="container trade__grid">
+        <div>
+          <p class="eyebrow reveal">Plan Canje</p>
+          <h2 class="section__title reveal">Tu celular de antes<br><span class="grad">vale dinero.</span></h2>
+          <p class="lead reveal">Entréganos tu equipo usado y te lo descontamos al instante. Calcula cuánto vale en 10 segundos.</p>
+        </div>
+        <form class="trade__card reveal" id="tradeForm" onsubmit="return false">
+          <label>Marca de tu celular
+            <select id="tBrand">
+              <option value="apple">Apple (iPhone)</option>
+              <option value="samsung">Samsung</option>
+              <option value="xiaomi">Xiaomi / Redmi / POCO</option>
+              <option value="motorola">Motorola</option>
+              <option value="otro">Otra marca</option>
+            </select>
+          </label>
+          <label>Antigüedad
+            <div class="seg" id="tAge">
+              <button type="button" data-v="1" class="is-active">1 año</button>
+              <button type="button" data-v="2">2 años</button>
+              <button type="button" data-v="3">3+ años</button>
+            </div>
+          </label>
+          <label>Estado
+            <div class="seg" id="tCond">
+              <button type="button" data-v="1" class="is-active">Impecable</button>
+              <button type="button" data-v="0.75">Detalles</button>
+              <button type="button" data-v="0.4">Con fallas</button>
+            </div>
+          </label>
+          <div class="trade__result">
+            <span>Te descontamos hasta</span>
+            <b id="tValue">S/ 0</b>
+          </div>
+          <a href="#" class="btn btn--wa btn--block" id="tradeWa">Cotizar mi equipo por WhatsApp</a>
+          <small class="note">Valor referencial. La tasación final se hace en tienda.</small>
+        </form>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section reviews">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Clientes</p>
+          <h2 class="section__title reveal">Lo que dicen<br><span class="muted">de Huancayo a Lima.</span></h2>
+        </div>
+      </div>
+      <div class="reviews__rail">
+        <div class="reviews__track" id="reviews"></div>
+      </div>
+    </section>
+
+    <!-- TIENDAS -->
+    <section class="section stores" id="tiendas">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Tiendas</p>
+          <h2 class="section__title reveal">Visítanos y pruébalo<br><span class="muted">antes de llevarlo.</span></h2>
+        </div>
+        <div class="stores__grid">
+          <article class="store reveal tilt">
+            <div class="store__map store__map--hyo">
+              <span class="pin"></span>
+            </div>
+            <div class="store__body">
+              <span class="tag">Tienda principal</span>
+              <h3>Huancayo</h3>
+              <p>Calle Real 845, frente a la Plaza Constitución</p>
+              <p class="muted">Lun a Sáb 9:00 a 21:00 · Dom 10:00 a 18:00</p>
+              <a href="#" class="link" data-wa="Hola, quiero visitar la tienda de Huancayo.">Cómo llegar →</a>
+            </div>
+          </article>
+          <article class="store reveal tilt">
+            <div class="store__map store__map--lima">
+              <span class="pin"></span>
+            </div>
+            <div class="store__body">
+              <span class="tag">Nueva</span>
+              <h3>Lima, Miraflores</h3>
+              <p>Av. José Larco 1120, a dos cuadras del Parque Kennedy</p>
+              <p class="muted">Lun a Dom 10:00 a 22:00</p>
+              <a href="#" class="link" data-wa="Hola, quiero visitar la tienda de Miraflores.">Cómo llegar →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="preguntas">
+      <div class="container faq__grid">
+        <div>
+          <p class="eyebrow reveal">Ayuda</p>
+          <h2 class="section__title reveal">Preguntas<br><span class="muted">frecuentes.</span></h2>
+        </div>
+        <div class="accordion">
+          <details class="reveal" open>
+            <summary>¿Los celulares son originales y nuevos?</summary>
+            <p>Sí. Todos llegan sellados de fábrica, con IMEI registrado en OSIPTEL y comprobante electrónico. Puedes verificar el IMEI antes de pagar.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Cómo funciona el pago contra entrega?</summary>
+            <p>En Lima y Huancayo pagas al recibir con Yape, Plin o efectivo. En provincias separas con S/ 50 y pagas el saldo al recoger en agencia.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Puedo pagar en cuotas?</summary>
+            <p>Hasta 12 cuotas sin intereses con tarjetas de crédito BCP, Interbank, BBVA y Scotiabank.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Qué cubre la garantía?</summary>
+            <p>12 meses contra fallas de fábrica. Te prestamos un equipo mientras reparamos el tuyo en nuestro servicio técnico.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta__box reveal">
+          <div class="cta__glow"></div>
+          <h2>¿Listo para estrenar?</h2>
+          <p>Escríbenos y un asesor te responde en menos de 5 minutos.</p>
+          <a href="#" class="btn btn--wa btn--lg magnetic" data-wa="Hola Kuntur Mobile, quiero estrenar celular. ¿Me ayudan?">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.4 1.7 6.3L3 29l7.3-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.7 12.7-12.7S23 3 16 3Zm0 23.2c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.1 1.2-4.2-.3-.4a10.5 10.5 0 1 1 9.1 5.1Zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/></svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#inicio" class="brand"><span class="logo-mark"></span><span class="brand__name">KUNTUR<b>mobile</b></span></a>
+        <p class="muted">Celulares originales para todo el Perú desde Huancayo.</p>
+      </div>
+      <div>
+        <h4>Tienda</h4>
+        <a href="#catalogo">Catálogo</a><a href="#canje">Plan Canje</a><a href="#tiendas">Tiendas</a>
+      </div>
+      <div>
+        <h4>Ayuda</h4>
+        <a href="#preguntas">Preguntas frecuentes</a><a href="#">Libro de reclamaciones</a><a href="#">Términos y condiciones</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="#" data-wa="Hola Kuntur Mobile">WhatsApp 999 999 999</a><a href="#">@kunturmobile</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Kuntur Mobile S.A.C. · RUC 20XXXXXXXXX</span>
+      <span>Sitio de demostración</span>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="#" class="wa-float" data-wa="Hola Kuntur Mobile, vengo de la web." aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.4 1.7 6.3L3 29l7.3-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.7 12.7-12.7S23 3 16 3Zm5.8 15.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/></svg>
+    <span class="wa-float__tip">¿Te ayudamos?</span>
+  </a>
+
+  <!-- Carrito / pedido -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__backdrop" data-close></div>
+    <aside class="drawer__panel" role="dialog" aria-label="Mi pedido">
+      <header><h3>Mi pedido</h3><button class="icon-btn" data-close aria-label="Cerrar">✕</button></header>
+      <div class="drawer__items" id="cartItems"></div>
+      <footer>
+        <div class="drawer__total"><span>Total</span><b id="cartTotal">S/ 0</b></div>
+        <a href="#" class="btn btn--wa btn--block" id="cartWa">Enviar pedido por WhatsApp</a>
+        <small class="muted">Un asesor confirma stock y envío al instante.</small>
+      </footer>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
