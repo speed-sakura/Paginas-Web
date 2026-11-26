@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kallpa Laptops · Laptops en Huancayo y Lima</title>
+  <meta name="description" content="Laptops gamer, de trabajo y para estudiar con garantía oficial, 12 cuotas sin intereses y envío a todo el Perú. Pide por WhatsApp.">
+  <meta name="theme-color" content="#eceefa">
+  <meta property="og:title" content="Kallpa Laptops">
+  <meta property="og:description" content="Laptops con garantía oficial, cuotas sin intereses y envío a todo el Perú.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fondo de colores suaves que se ve a través del vidrio -->
+  <div class="aurora" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span>
+  </div>
+
+  <!-- Filtros SVG de refracción (solo navegadores que lo soportan) -->
+  <svg class="sr-only" aria-hidden="true" width="0" height="0">
+    <filter id="liquid" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.012" numOctaves="2" seed="7" result="noise"/>
+      <feGaussianBlur in="noise" stdDeviation="2" result="soft"/>
+      <feDisplacementMap in="SourceGraphic" in2="soft" scale="38" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feImage id="lensMap" x="0" y="0" width="150" height="150" preserveAspectRatio="none" result="map"/>
+      <feDisplacementMap in="SourceGraphic" in2="map" scale="70" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <!-- Navegación -->
+  <header class="nav-wrap">
+    <nav class="nav glass refract" aria-label="Principal">
+      <a class="logo" href="#inicio" aria-label="Kallpa Laptops, inicio">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__txt" data-store-name>Kallpa</span>
+      </a>
+      <div class="nav__links">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#encuentra">Encuentra la tuya</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#tiendas">Tiendas</a>
+      </div>
+      <button class="cart-btn" type="button" data-open-cart aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 7Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Portada -->
+    <section class="hero" id="inicio">
+      <div class="hero__copy">
+        <p class="pill glass in" style="--i:0"><span class="dot"></span> Envío gratis en Lima y Huancayo</p>
+        <h1 class="in" style="--i:1">Tu próxima laptop,<br><span class="shine">clara como el cristal.</span></h1>
+        <p class="lead in" style="--i:2">Gamer, para trabajar o para estudiar. Garantía oficial, hasta 12 cuotas sin intereses y te la llevamos a cualquier ciudad del Perú.</p>
+        <div class="hero__cta in" style="--i:3">
+          <a class="btn btn--dark" href="#catalogo">Ver laptops</a>
+          <a class="btn glass" href="#encuentra">¿Cuál me conviene?</a>
+        </div>
+        <ul class="hero__trust in" style="--i:4">
+          <li><b>4.9</b> en Google</li>
+          <li><b>+3,200</b> laptops entregadas</li>
+          <li><b>Yape</b> y Plin</li>
+        </ul>
+      </div>
+
+      <div class="hero__stage" data-stage>
+        <div class="hero-lap" data-tilt>
+          <div class="lap lap--hero" style="--c:#2f3440;--s1:#7aa8ff;--s2:#c48bff;--s3:#ffb3d1">
+            <div class="lap__lid"><div class="lap__screen"><div class="lap__ui">
+              <span class="ui-win w1"></span><span class="ui-win w2"></span><span class="ui-dock"></span>
+            </div></div></div>
+            <div class="lap__base"></div>
+          </div>
+        </div>
+        <div class="chip glass float f1"><span class="chip__ico">⚡</span><div><b>RTX 4070</b><small>para jugar en alto</small></div></div>
+        <div class="chip glass float f2"><span class="chip__ico">🔋</span><div><b>Hasta 24 h</b><small>de batería</small></div></div>
+        <div class="chip glass float f3"><span class="chip__ico">🛡️</span><div><b>Garantía oficial</b><small>1 año + soporte propio</small></div></div>
+        <div class="lens glass" data-lens aria-hidden="true"><span>Arrástrame</span></div>
+      </div>
+    </section>
+
+    <!-- Marcas -->
+    <section class="brands" aria-label="Marcas que vendemos">
+      <div class="brands__track">
+        <span>Apple</span><span>ASUS</span><span>Lenovo</span><span>HP</span><span>Acer</span><span>Dell</span><span>MSI</span>
+        <span aria-hidden="true">Apple</span><span aria-hidden="true">ASUS</span><span aria-hidden="true">Lenovo</span><span aria-hidden="true">HP</span><span aria-hidden="true">Acer</span><span aria-hidden="true">Dell</span><span aria-hidden="true">MSI</span>
+      </div>
+    </section>
+
+    <!-- Catálogo -->
+    <section class="section" id="catalogo">
+      <div class="head rv">
+        <p class="over">Catálogo</p>
+        <h2>Elige por lo que vas a hacer.</h2>
+      </div>
+      <div class="seg glass rv" role="tablist" aria-label="Filtrar laptops" data-filters>
+        <span class="seg__glow" aria-hidden="true"></span>
+      </div>
+      <div class="grid" data-grid></div>
+    </section>
+
+    <!-- Encuentra tu laptop -->
+    <section class="section" id="encuentra">
+      <div class="finder glass rv">
+        <div class="finder__form">
+          <p class="over">Asesor en 10 segundos</p>
+          <h2>¿Cuál es tu laptop?</h2>
+          <p class="muted">Dinos para qué la quieres y cuánto quieres invertir. Te mostramos la mejor opción al instante.</p>
+          <fieldset class="uses" data-uses>
+            <legend>La voy a usar para</legend>
+          </fieldset>
+          <label class="budget">
+            <span>Mi presupuesto: <b data-budget-out>S/ 4,500</b></span>
+            <input type="range" min="1500" max="10000" step="100" value="4500" data-budget aria-label="Presupuesto en soles">
+            <span class="budget__ends"><small>S/ 1,500</small><small>S/ 10,000</small></span>
+          </label>
+        </div>
+        <div class="finder__result" data-result aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="section" id="beneficios">
+      <div class="head rv">
+        <p class="over">Por qué Kallpa</p>
+        <h2>Comprar una laptop no debería dar miedo.</h2>
+      </div>
+      <div class="bento">
+        <article class="tile glass rv tile--wide" style="--i:0">
+          <span class="tile__ico">💳</span>
+          <h3>Hasta 12 cuotas sin intereses</h3>
+          <p>Con cualquier tarjeta de crédito. También aceptamos Yape, Plin y transferencia.</p>
+          <div class="cuotas" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </article>
+        <article class="tile glass rv" style="--i:1">
+          <span class="tile__ico">🚚</span>
+          <h3>Envío a todo el Perú</h3>
+          <p>Gratis en Lima y Huancayo el mismo día. Provincias en 24 a 72 horas, asegurado.</p>
+        </article>
+        <article class="tile glass rv" style="--i:2">
+          <span class="tile__ico">🛡️</span>
+          <h3>Garantía oficial</h3>
+          <p>Equipos nuevos y sellados, con boleta o factura. Nosotros gestionamos la garantía por ti.</p>
+        </article>
+        <article class="tile glass rv" style="--i:3">
+          <span class="tile__ico">🧰</span>
+          <h3>Te la entregamos lista</h3>
+          <p>Encendida, actualizada y con tus programas. Pasamos tus archivos si lo pides.</p>
+        </article>
+        <article class="tile glass rv tile--stat" style="--i:4">
+          <b data-count="3200" data-prefix="+">+3,200</b>
+          <p>laptops entregadas desde Huancayo hasta Tacna.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section class="section reviews" aria-label="Reseñas de clientes">
+      <div class="head rv">
+        <p class="over">Clientes</p>
+        <h2>4.9 de 5 en Google.</h2>
+      </div>
+      <div class="marquee">
+        <div class="marquee__track">
+          <figure class="review glass"><p>“Me llegó a Ayacucho en dos días, sellada y con Office instalado. Pagué en 12 cuotas.”</p><figcaption>Lucía R. · Ayacucho</figcaption></figure>
+          <figure class="review glass"><p>“Me ayudaron a elegir una para AutoCAD sin venderme lo más caro. Atención de diez.”</p><figcaption>Jorge M. · Huancayo</figcaption></figure>
+          <figure class="review glass"><p>“La Legion vuela. Me la entregaron en San Isidro el mismo día que la pedí.”</p><figcaption>Diego P. · Lima</figcaption></figure>
+          <figure class="review glass"><p>“Compré la MacBook para mi hija universitaria. Le pasaron todos sus archivos.”</p><figcaption>Rosa T. · Tarma</figcaption></figure>
+          <figure class="review glass"><p>“Precio igual o mejor que en Lima y con factura para mi empresa.”</p><figcaption>Andrés V. · Jauja</figcaption></figure>
+          <figure class="review glass" aria-hidden="true"><p>“Me llegó a Ayacucho en dos días, sellada y con Office instalado. Pagué en 12 cuotas.”</p><figcaption>Lucía R. · Ayacucho</figcaption></figure>
+          <figure class="review glass" aria-hidden="true"><p>“Me ayudaron a elegir una para AutoCAD sin venderme lo más caro. Atención de diez.”</p><figcaption>Jorge M. · Huancayo</figcaption></figure>
+          <figure class="review glass" aria-hidden="true"><p>“La Legion vuela. Me la entregaron en San Isidro el mismo día que la pedí.”</p><figcaption>Diego P. · Lima</figcaption></figure>
+          <figure class="review glass" aria-hidden="true"><p>“Compré la MacBook para mi hija universitaria. Le pasaron todos sus archivos.”</p><figcaption>Rosa T. · Tarma</figcaption></figure>
+          <figure class="review glass" aria-hidden="true"><p>“Precio igual o mejor que en Lima y con factura para mi empresa.”</p><figcaption>Andrés V. · Jauja</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tiendas -->
+    <section class="section" id="tiendas">
+      <div class="head rv">
+        <p class="over">Tiendas</p>
+        <h2>Ven a probarla antes de llevarla.</h2>
+      </div>
+      <div class="stores">
+        <article class="store glass rv" style="--i:0">
+          <div class="store__map" aria-hidden="true"><span class="pin"></span></div>
+          <div class="store__body">
+            <h3>Huancayo</h3>
+            <p>Av. Giráldez 455, frente a la Plaza Constitución</p>
+            <p class="muted">Lun a sáb 9:30 a. m. a 8:30 p. m. · Dom 10 a. m. a 2 p. m.</p>
+            <div class="store__cta">
+              <a class="btn btn--sm glass" href="https://www.google.com/maps/search/?api=1&query=Av.+Gir%C3%A1ldez+455+Huancayo" target="_blank" rel="noopener">Cómo llegar</a>
+              <a class="btn btn--sm btn--wa" data-wa="Hola, quiero visitar la tienda de Huancayo" href="#">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+        <article class="store glass rv" style="--i:1">
+          <div class="store__map store__map--b" aria-hidden="true"><span class="pin"></span></div>
+          <div class="store__body">
+            <h3>Lima · San Isidro</h3>
+            <p>Av. Arequipa 3520, a una cuadra de la estación Javier Prado</p>
+            <p class="muted">Lun a sáb 10 a. m. a 9 p. m. · Dom 11 a. m. a 5 p. m.</p>
+            <div class="store__cta">
+              <a class="btn btn--sm glass" href="https://www.google.com/maps/search/?api=1&query=Av.+Arequipa+3520+San+Isidro+Lima" target="_blank" rel="noopener">Cómo llegar</a>
+              <a class="btn btn--sm btn--wa" data-wa="Hola, quiero visitar la tienda de San Isidro" href="#">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Preguntas -->
+    <section class="section faq" aria-label="Preguntas frecuentes">
+      <div class="head rv">
+        <p class="over">Preguntas</p>
+        <h2>Lo que siempre nos preguntan.</h2>
+      </div>
+      <div class="faq__list">
+        <details class="glass rv" style="--i:0"><summary>¿Las laptops son nuevas y originales?</summary><p>Sí. Todas son nuevas, selladas y con garantía oficial de la marca. Te damos boleta o factura electrónica.</p></details>
+        <details class="glass rv" style="--i:1"><summary>¿Cómo pago en cuotas?</summary><p>Con tarjeta de crédito en la tienda o con un link de pago seguro que te enviamos por WhatsApp. Hasta 12 cuotas sin intereses.</p></details>
+        <details class="glass rv" style="--i:2"><summary>¿Envían a mi ciudad?</summary><p>Enviamos a todo el Perú con seguro. En Lima y Huancayo es gratis y el mismo día; en provincias llega en 24 a 72 horas.</p></details>
+        <details class="glass rv" style="--i:3"><summary>¿Puedo recibir mi laptop anterior como parte de pago?</summary><p>Sí, la evaluamos en tienda o por fotos en WhatsApp y te damos un precio en el momento.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__in glass">
+      <div><b data-store-name>Kallpa Laptops</b><p class="muted">Huancayo · Lima · Envíos a todo el Perú</p></div>
+      <p class="muted small">Demo con negocio, precios y datos ficticios.</p>
+    </div>
+  </footer>
+
+  <!-- Barra inferior para celular -->
+  <nav class="tabbar glass refract" aria-label="Accesos rápidos">
+    <a href="#inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1v-8Z"/></svg>Inicio</a>
+    <a href="#catalogo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg>Laptops</a>
+    <a href="#encuentra"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg>Asesor</a>
+    <a class="tab-wa" data-wa="Hola, quiero información sobre una laptop" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5Z"/><path d="M9 9.2c.2 1.8 2 4 4 4.6l1-1.1 1.6.7c-.2 1-1 1.6-2 1.5-2.7-.3-5.4-3-5.7-5.7-.1-1 .5-1.8 1.5-2l.7 1.6-1.1.4Z"/></svg>WhatsApp</a>
+    <button type="button" data-open-cart><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 7Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>Carrito<span class="cart-count" data-cart-count>0</span></button>
+  </nav>
+
+  <!-- Detalle de laptop -->
+  <div class="sheet" data-sheet hidden>
+    <div class="sheet__scrim" data-close-sheet></div>
+    <div class="sheet__panel glass" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" data-sheet-panel></div>
+  </div>
+
+  <!-- Carrito -->
+  <div class="drawer" data-drawer hidden>
+    <div class="drawer__scrim" data-close-cart></div>
+    <aside class="drawer__panel glass" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="drawer__head">
+        <h2 id="cartTitle">Tu pedido</h2>
+        <button class="x" type="button" data-close-cart aria-label="Cerrar carrito">✕</button>
+      </div>
+      <div class="drawer__items" data-cart-items></div>
+      <form class="order" data-order>
+        <div class="order__total"><span>Total</span><b data-cart-total>S/ 0</b></div>
+        <p class="muted small" data-cart-cuotas></p>
+        <label>Tu nombre<input name="nombre" required autocomplete="name" placeholder="Ej. María Quispe"></label>
+        <label>Ciudad
+          <select name="ciudad">
+            <option>Huancayo</option><option>Lima</option><option>Arequipa</option><option>Cusco</option><option>Trujillo</option><option>Otra ciudad</option>
+          </select>
+        </label>
+        <div class="opts" role="radiogroup" aria-label="Entrega">
+          <label><input type="radio" name="entrega" value="Envío a domicilio" checked><span>Envío</span></label>
+          <label><input type="radio" name="entrega" value="Recojo en tienda"><span>Recojo en tienda</span></label>
+        </div>
+        <div class="opts" role="radiogroup" aria-label="Forma de pago">
+          <label><input type="radio" name="pago" value="Tarjeta en 12 cuotas" checked><span>Cuotas</span></label>
+          <label><input type="radio" name="pago" value="Yape / Plin"><span>Yape / Plin</span></label>
+          <label><input type="radio" name="pago" value="Transferencia"><span>Transferencia</span></label>
+        </div>
+        <button class="btn btn--wa btn--block" type="submit">Enviar pedido por WhatsApp</button>
+      </form>
+    </aside>
+  </div>
+
+  <div class="toast glass" data-toast role="status" aria-live="polite"></div>
+
+  <a class="wa-float" data-wa="Hola, quiero información sobre una laptop" href="#" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-3.9-.5-5.5-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.5 4.9 2 .9 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4Z"/></svg>
+  </a>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
