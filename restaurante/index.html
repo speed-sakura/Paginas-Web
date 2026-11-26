@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wayra | Cocina peruana de autor en Barranco</title>
+  <meta name="description" content="Cocina peruana de autor en Barranco, Lima. Carta, menú degustación de 7 tiempos y reservas por WhatsApp.">
+  <meta name="theme-color" content="#0e0c0a">
+  <meta property="og:title" content="Wayra | Cocina peruana de autor">
+  <meta property="og:description" content="Fuego, mar y Andes. Reserva tu mesa por WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="intro" aria-hidden="true"><span class="intro__w">W</span><span class="intro__line"></span></div>
+  <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <a href="#inicio" class="brand" aria-label="Wayra, inicio">WAYRA</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#carta">Carta</a>
+      <a href="#degustacion">Degustación</a>
+      <a href="#chef">El chef</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+    <a href="#reservas" class="btn btn--gold btn--sm">Reservar</a>
+    <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="over fade">Cocina peruana de autor · Barranco, Lima</p>
+          <h1 class="hero__title" aria-label="Fuego, mar y Andes.">
+            <span class="w"><span>Fuego,</span></span>
+            <span class="w"><span><em>mar</em> y</span></span>
+            <span class="w"><span>Andes.</span></span>
+          </h1>
+          <p class="hero__lead fade">Producto de pescadores artesanales y comunidades andinas, cocinado a la brasa frente a ti.</p>
+          <div class="hero__cta fade">
+            <a href="#reservas" class="btn btn--gold">Reservar mesa</a>
+            <a href="#carta" class="link-line">Ver la carta</a>
+          </div>
+        </div>
+        <div class="hero__plate" id="plate">
+          <div class="plate__glow"></div>
+          <svg viewBox="0 0 500 500" class="plate" aria-label="Ceviche emplatado">
+            <defs>
+              <radialGradient id="stone" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#2d2a27"/><stop offset="1" stop-color="#141210"/></radialGradient>
+              <radialGradient id="tiger" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f5efe0"/><stop offset="1" stop-color="#e6dcc0" stop-opacity=".85"/></radialGradient>
+            </defs>
+            <circle cx="250" cy="250" r="240" fill="url(#stone)"/>
+            <circle cx="250" cy="250" r="240" fill="none" stroke="rgba(212,165,90,.25)" stroke-width="2"/>
+            <circle cx="250" cy="250" r="200" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="30"/>
+            <g class="dish">
+              <ellipse cx="250" cy="250" rx="130" ry="122" fill="url(#tiger)"/>
+              <g fill="#fbf6ec" stroke="#e8d9c4" stroke-width="2">
+                <rect x="190" y="200" width="44" height="40" rx="10" transform="rotate(-12 212 220)"/>
+                <rect x="245" y="185" width="46" height="42" rx="10" transform="rotate(18 268 206)"/>
+                <rect x="270" y="245" width="44" height="40" rx="10" transform="rotate(-6 292 265)"/>
+                <rect x="205" y="258" width="46" height="40" rx="10" transform="rotate(24 228 278)"/>
+                <rect x="240" y="232" width="36" height="34" rx="9" transform="rotate(-30 258 249)"/>
+              </g>
+              <g fill="none" stroke="#9b3f7a" stroke-width="7" stroke-linecap="round">
+                <path d="M180 190c20-20 50-24 70-14"/><path d="M290 300c20-6 34-22 36-42"/><path d="M200 310c14 8 34 10 50 4"/><path d="M300 180c14 6 24 18 26 32"/>
+              </g>
+              <g fill="#f2c94c">
+                <circle cx="160" cy="250" r="7"/><circle cx="168" cy="236" r="7"/><circle cx="174" cy="262" r="7"/><circle cx="156" cy="268" r="6"/><circle cx="168" cy="278" r="6"/>
+              </g>
+              <circle cx="335" cy="225" r="26" fill="#e88a3c"/><circle cx="335" cy="225" r="18" fill="#f2a65a"/>
+              <g fill="#4f8a3a">
+                <path d="M230 170c6-10 18-10 20 0-8 6-14 6-20 0Z"/><path d="M300 290c6-10 18-10 20 0-8 6-14 6-20 0Z"/><path d="M215 245c4-8 14-8 16 0-6 5-10 5-16 0Z"/><path d="M262 300c4-8 14-8 16 0-6 5-10 5-16 0Z"/>
+              </g>
+              <g fill="#d63c2f"><circle cx="252" cy="222" r="4"/><circle cx="286" cy="232" r="3"/><circle cx="226" cy="268" r="3.5"/></g>
+            </g>
+          </svg>
+          <div class="plate__label"><small>Plato insignia</small><b>Ceviche Wayra</b><span>S/ 58</span></div>
+        </div>
+      </div>
+      <div class="hero__foot container fade">
+        <span>Mar a domingo</span><span class="sep"></span><span>Almuerzo 12:30 · Cena 19:00</span><span class="sep"></span><span>★ 4.8 en Google</span>
+      </div>
+    </section>
+
+    <!-- MANIFIESTO -->
+    <section class="manifesto" id="historia">
+      <div class="container">
+        <p class="over">Nuestra historia</p>
+        <p class="manifesto__text" id="manifesto">Wayra significa viento en quechua. Es el viento que trae el olor del mar a Barranco y el humo de la brasa a la mesa. Cocinamos lo que el Perú nos da cada mañana, sin prisa y con respeto por quienes lo cultivan.</p>
+      </div>
+    </section>
+
+    <!-- CARTA -->
+    <section class="section carta" id="carta">
+      <div class="container">
+        <div class="sec-head">
+          <p class="over reveal">La carta</p>
+          <h2 class="h2 reveal">Sabores que<br><em>cuentan el Perú.</em></h2>
+        </div>
+        <div class="cats reveal" id="cats">
+          <button class="cat is-active" data-cat="entradas">Entradas</button>
+          <button class="cat" data-cat="fondos">Fondos</button>
+          <button class="cat" data-cat="mar">Del mar</button>
+          <button class="cat" data-cat="postres">Postres y bar</button>
+        </div>
+        <div class="dishes" id="dishes"></div>
+        <p class="legend reveal"><span class="t t--chef">✦</span> Recomendado del chef <span class="t t--pic">🌶</span> Picante <span class="t t--veg">●</span> Vegetariano</p>
+      </div>
+    </section>
+
+    <!-- DEGUSTACIÓN -->
+    <section class="tasting" id="degustacion">
+      <div class="tasting__pin">
+        <div class="tasting__head container">
+          <div>
+            <p class="over">Menú degustación</p>
+            <h2 class="h2">Siete tiempos,<br><em>un solo viaje.</em></h2>
+          </div>
+          <div class="tasting__price">
+            <b id="tPrice">S/ 289</b><span>por persona</span>
+            <small id="tPair">Maridaje opcional +S/ 140</small>
+          </div>
+        </div>
+        <div class="tasting__track" id="track"></div>
+        <div class="tasting__bar container"><span id="tBar"></span></div>
+      </div>
+    </section>
+
+    <!-- CHEF -->
+    <section class="section chef" id="chef">
+      <div class="container chef__grid">
+        <div class="chef__portrait reveal" aria-hidden="true">
+          <svg viewBox="0 0 300 380">
+            <defs>
+              <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b241d"/><stop offset="1" stop-color="#120f0c"/></linearGradient>
+              <radialGradient id="fl" cx="50%" cy="80%" r="60%"><stop offset="0" stop-color="#f0c987"/><stop offset=".5" stop-color="#e2552d"/><stop offset="1" stop-color="#e2552d" stop-opacity="0"/></radialGradient>
+            </defs>
+            <path d="M0 150a150 150 0 0 1 300 0v230H0Z" fill="url(#cg)"/>
+            <path d="M14 150a136 136 0 0 1 272 0v216H14Z" fill="none" stroke="rgba(212,165,90,.35)"/>
+            <g class="flame"><path d="M150 330c-46 0-70-30-70-66 0-40 34-56 40-96 22 18 30 40 26 60 12-10 18-26 16-46 34 26 58 56 58 86 0 36-24 62-70 62Z" fill="url(#fl)"/>
+            <path d="M150 330c-22 0-34-14-34-32 0-20 16-28 20-46 12 10 16 22 14 32 8-6 10-14 10-24 16 14 24 26 24 40 0 18-12 30-34 30Z" fill="#f0c987" opacity=".9"/></g>
+            <text x="150" y="130" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="64" font-style="italic" fill="#d4a55a">MQ</text>
+            <line x1="110" y1="150" x2="190" y2="150" stroke="#d4a55a" stroke-width="1"/>
+          </svg>
+          <span class="chef__badge">Desde 2014</span>
+        </div>
+        <div>
+          <p class="over reveal">El chef</p>
+          <blockquote class="quote reveal">“Un plato peruano empieza en el mar o en la chacra, mucho antes de llegar a la cocina.”</blockquote>
+          <p class="chef__name reveal"><b>Mateo Quispe Valdivia</b> · Chef y fundador</p>
+          <div class="chef__stats reveal">
+            <div><b data-count="11">0</b><span>años en Barranco</span></div>
+            <div><b data-count="40" data-suffix="+">0</b><span>productores aliados</span></div>
+            <div><b data-count="96" data-suffix="%">0</b><span>insumos peruanos</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVAS -->
+    <section class="section reserve" id="reservas">
+      <div class="container reserve__grid">
+        <form class="rform" id="rform" novalidate>
+          <p class="over reveal">Reservas</p>
+          <h2 class="h2 reveal">Tu mesa<br><em>te espera.</em></h2>
+          <div class="rrow reveal">
+            <label class="rfield"><span>Fecha</span><input type="date" id="rDate" required></label>
+            <div class="rfield"><span>Personas</span>
+              <div class="stepper"><button type="button" data-d="-1" aria-label="Menos">−</button><output id="rPeople">2</output><button type="button" data-d="1" aria-label="Más">+</button></div>
+            </div>
+          </div>
+          <div class="rfield reveal"><span>Hora</span><div class="chips" id="rTimes"></div></div>
+          <div class="rfield reveal"><span>Zona</span><div class="chips" id="rZones"></div></div>
+          <div class="rrow reveal">
+            <label class="rfield"><span>Ocasión</span><select id="rOcc"></select></label>
+            <label class="rfield"><span>Nombre</span><input id="rName" placeholder="A nombre de" autocomplete="name"></label>
+          </div>
+          <label class="rfield reveal"><span>Notas (alergias, silla de bebé…)</span><input id="rNotes" placeholder="Opcional"></label>
+          <button class="btn btn--gold btn--wide reveal" type="submit">Confirmar por WhatsApp</button>
+          <p class="fine reveal">Respondemos en menos de 10 minutos en horario de atención. Tolerancia de 15 minutos.</p>
+        </form>
+
+        <aside class="ticket reveal" id="ticket" aria-live="polite">
+          <div class="ticket__top">
+            <span class="brand">WAYRA</span>
+            <small>Reserva</small>
+          </div>
+          <div class="ticket__body">
+            <div><small>Fecha</small><b id="tkDate">Elige una fecha</b></div>
+            <div><small>Hora</small><b id="tkTime">—</b></div>
+            <div><small>Personas</small><b id="tkPeople">2</b></div>
+            <div><small>Zona</small><b id="tkZone">Salón</b></div>
+            <div class="wide"><small>A nombre de</small><b id="tkName">—</b></div>
+          </div>
+          <div class="ticket__cut"></div>
+          <div class="ticket__foot">
+            <span>Av. Pedro de Osma 215, Barranco</span>
+            <div class="barcode"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="events">
+      <div class="container events__grid">
+        <div class="ev reveal"><b>Salón privado</b><span>Hasta 24 personas, menú a medida.</span></div>
+        <div class="ev reveal" style="--d:.1s"><b>Eventos corporativos</b><span>Almuerzos de directorio y lanzamientos.</span></div>
+        <div class="ev reveal" style="--d:.2s"><b>Pedidas y aniversarios</b><span>Mesa decorada y postre especial.</span></div>
+        <a href="#" class="btn btn--line reveal" data-wa="Hola Wayra, quisiera información sobre eventos privados.">Cotizar evento</a>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section class="section where" id="ubicacion">
+      <div class="container where__grid">
+        <div>
+          <p class="over reveal">Ubicación</p>
+          <h2 class="h2 reveal">Frente al mar<br><em>de Barranco.</em></h2>
+        </div>
+        <dl class="hours reveal">
+          <div><dt>Dirección</dt><dd>Av. Pedro de Osma 215, Barranco, Lima</dd></div>
+          <div><dt>Almuerzo</dt><dd>Martes a domingo · 12:30 a 16:00</dd></div>
+          <div><dt>Cena</dt><dd>Martes a sábado · 19:00 a 23:00</dd></div>
+          <div><dt>Estacionamiento</dt><dd>Valet parking gratuito</dd></div>
+          <div><dt>Pagos</dt><dd>Tarjetas, Yape y Plin</dd></div>
+        </dl>
+        <a class="btn btn--gold reveal" href="https://www.google.com/maps/search/?api=1&query=Barranco+Lima" target="_blank" rel="noopener">Cómo llegar ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="container">
+      <div class="foot__big">WAYRA</div>
+      <div class="foot__row">
+        <span>Cocina peruana de autor · Barranco</span>
+        <span>Sitio de demostración: nombre, precios y datos son ficticios.</span>
+        <a href="#" data-wa="Hola Wayra">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="#" data-wa="Hola Wayra, quisiera hacer una consulta." aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></svg>
+  </a>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
