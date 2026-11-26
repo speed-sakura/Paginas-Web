@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Resonar · Parlantes premium en Perú</title>
+  <meta name="description" content="Parlantes y barras de sonido premium con envío en 24 h, garantía en Perú y pedido por WhatsApp.">
+  <meta name="theme-color" content="#05070a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="intro" aria-hidden="true"><span class="intro__logo"><i></i>Resonar</span></div>
+
+  <header class="nav">
+    <a href="#" class="logo"><i></i>Resonar</a>
+    <nav class="nav__links"><a href="#tienda">Tienda</a><a href="#ventajas">Ventajas</a><a href="#specs">Sonido</a><a href="#opiniones">Opiniones</a></nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">Carrito <b id="cartCount">0</b></button>
+  </header>
+
+  <section class="hero" id="hero">
+    <h1 class="hero__word" aria-label="Amplificado"><span>Ampli</span><span>ficado</span></h1>
+    <div class="hero__pair" id="pair">
+      <div class="spk spk--a"><div class="spk__body"></div><div class="spk__top"><i></i></div></div>
+      <div class="spk spk--b"><div class="spk__body"></div><div class="spk__top"><i></i></div></div>
+    </div>
+    <div class="hero__bottom">
+      <div class="rating rv"><span class="stars">★★★★★</span><span><b>4.9</b> · 1,820 reseñas (ejemplo)</span></div>
+      <p class="hero__lead rv" style="--i:1">Sonido de estudio que cabe en tu mochila. Parlantes premium con envío en 24 h y garantía de 2 años en Perú.</p>
+      <a href="#tienda" class="price-card rv" style="--i:2"><span>Resonar Uno</span><b>S/ 1,290</b><em>Comprar ↗</em></a>
+    </div>
+  </section>
+
+  <section class="adv" id="ventajas">
+    <div class="wrap adv__head">
+      <h2 class="rv">Ventajas que no<br><em>encontrarás en otro lado.</em></h2>
+      <p class="rv" style="--i:1">Diseñamos y elegimos cada parlante para que suene limpio a todo volumen, aguante la playa y la sierra, y te dure años.</p>
+    </div>
+    <div class="adv__track" id="advTrack"></div>
+    <div class="wrap adv__ctrl"><button class="arrow" data-dir="-1" aria-label="Anterior">←</button><button class="arrow arrow--on" data-dir="1" aria-label="Siguiente">→</button></div>
+  </section>
+
+  <section class="glow" id="glow">
+    <div class="glow__sticky">
+      <p class="glow__word">Graves</p>
+      <div class="glow__pair">
+        <div class="spk spk--big spk--l"><div class="spk__body"></div><div class="spk__top"><i></i></div></div>
+        <div class="spk spk--big spk--r"><div class="spk__body"></div><div class="spk__top"><i></i></div></div>
+      </div>
+      <div class="glow__card glow__card--1"><b data-count="42">0</b><span>horas en modo eco</span></div>
+      <div class="glow__card glow__card--2"><b>40 Hz – 22 kHz</b><span>respuesta de frecuencia</span></div>
+    </div>
+  </section>
+
+  <section class="shop" id="tienda">
+    <div class="wrap">
+      <div class="shop__head"><h2 class="rv">Elige tu <em>sonido.</em></h2><p class="rv" style="--i:1">Precios en soles con IGV. Paga en cuotas o al recibir en Lima y Huancayo.</p></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="specs" id="specs">
+    <div class="wrap specs__grid">
+      <div>
+        <h2 class="rv">Palabras que<br><em>suenan bien.</em></h2>
+        <ul class="spec-list" id="specList"></ul>
+      </div>
+      <div class="tower-wrap rv" style="--i:2"><div class="tower"><div class="tower__top"></div><div class="tower__light"></div></div></div>
+    </div>
+  </section>
+
+  <section class="reviews" id="opiniones">
+    <div class="wrap">
+      <h2 class="rv">Lo dicen <em>nuestros clientes.</em></h2>
+      <div class="rev-grid" id="revGrid"></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div><a href="#" class="logo"><i></i>Resonar</a><p id="cities"></p></div>
+      <div><b>Tienda</b><a href="#tienda">Parlantes</a><a href="#tienda">Barras de sonido</a><a href="#tienda">Accesorios</a></div>
+      <div><b>Ayuda</b><a href="#" class="js-wa">Garantía</a><a href="#" class="js-wa">Envíos</a><a href="#" class="js-wa">Soporte técnico</a></div>
+      <form class="news" id="news"><b>Recibe ofertas antes que nadie</b><div><input type="email" required placeholder="tu@correo.com" aria-label="Correo"><button>Suscribirme</button></div></form>
+    </div>
+    <div class="wrap foot__legal"><span>© 2026 Resonar · Demo ficticia</span><span>Libro de reclamaciones</span></div>
+    <div class="foot__word">Resonar</div>
+  </footer>
+
+  <!-- Carrito -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Carrito">
+    <div class="drawer__head"><b>Tu carrito</b><button id="closeCart" aria-label="Cerrar">✕</button></div>
+    <div class="drawer__items" id="items"></div>
+    <div class="drawer__foot">
+      <div class="sum"><span>Total</span><b id="total">S/ 0</b></div>
+      <p class="cuotas" id="cuotas"></p>
+      <button class="btn" id="checkout">Pedir por WhatsApp</button>
+    </div>
+  </aside>
+  <div class="toast" id="toast"></div>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

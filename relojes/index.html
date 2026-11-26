@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cumbre · Relojes inteligentes para la montaña</title>
+  <meta name="description" content="Relojes inteligentes de titanio con GPS, 36 h de batería y 100 m de resistencia. Cuotas sin intereses y pedido por WhatsApp.">
+  <meta name="theme-color" content="#060606">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,800;62..125,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <nav class="nav__links"><a href="#escenas">Diseño</a><a href="#correas">Correas</a><a href="#modelos">Modelos</a></nav>
+    <a href="#" class="logo">CUMBRE</a>
+    <a href="#modelos" class="nav__cta">Comprar</a>
+  </header>
+
+  <section class="hero">
+    <p class="hero__word" aria-hidden="true">CUMBRE</p>
+    <div class="hero__watch" id="heroWatch"></div>
+    <div class="hero__copy">
+      <h1>Hecho para<br>llegar arriba.</h1>
+      <p>El reloj inteligente para correr, subir y bucear. Desde <b>S/ 1,299</b> o 12 cuotas sin intereses.</p>
+    </div>
+    <a href="#modelos" class="hero__btn">Ver modelos</a>
+  </section>
+
+  <section class="scenes" id="escenas">
+    <div class="scenes__sticky">
+      <div class="scenes__glow" aria-hidden="true"></div>
+      <div class="scenes__text">
+        <p class="big"><span id="bigNum">49</span><small id="bigUnit">mm</small></p>
+        <h2 id="sTitle"></h2>
+        <p id="sText"></p>
+        <div class="dots" id="dots"></div>
+      </div>
+      <div class="scenes__watch" id="sceneWatch"></div>
+    </div>
+  </section>
+
+  <section class="straps" id="correas">
+    <div class="wrap straps__grid">
+      <div class="straps__watch" id="strapWatch"></div>
+      <div>
+        <h2 class="rv">Una correa.<br><span class="dim">Cuatro terrenos.</span></h2>
+        <p class="rv" style="--i:1">Cambia la correa en 3 segundos, sin herramientas. Elige una y mira cómo queda.</p>
+        <div class="strap-list" id="strapList"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="models" id="modelos">
+    <div class="wrap">
+      <h2 class="rv">Elige tu <span class="dim">límite.</span></h2>
+      <div class="model-grid" id="modelGrid"></div>
+      <div class="calc rv" id="calc">
+        <div><b>Calcula tus cuotas</b><p>Sin intereses con tarjetas participantes (ejemplo).</p></div>
+        <div class="calc__opts" id="months"></div>
+        <p class="calc__out" id="calcOut"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="perks">
+    <div class="wrap perk-grid">
+      <div class="rv"><b>Envío en 24 h</b><span>Lima, Huancayo y Cusco. Resto del Perú en 48 h.</span></div>
+      <div class="rv" style="--i:1"><b>2 años de garantía</b><span>Servicio técnico propio en Perú.</span></div>
+      <div class="rv" style="--i:2"><b>Prueba 15 días</b><span>Si no te convence, te devolvemos tu dinero.</span></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p class="foot__word">CUMBRE</p>
+    <div class="wrap foot__row"><span id="cities"></span><a href="#" id="waFoot">WhatsApp</a><span>Demo ficticia · 2026</span></div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

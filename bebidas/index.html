@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kausay · Bebidas andinas con gas</title>
+  <meta name="description" content="Chicha morada, maracuyá, camu camu y muña con gas, en lata. Arma tu pack o vuélvete distribuidor por WhatsApp.">
+  <meta name="theme-color" content="#120812">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#" class="logo">KAUSAY</a>
+    <nav class="nav__links"><a href="#sabores">Sabores</a><a href="#pack">Arma tu pack</a><a href="#distribuidor">Distribuidores</a></nav>
+    <a href="#pack" class="nav__cta">Pedir</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="stage" id="stage" aria-hidden="true"><div class="carousel" id="carousel"></div></div>
+    <div class="hero__copy">
+      <p class="eyebrow">Bebidas andinas con gas · Hecho en Perú</p>
+      <h1>Lo andino,<br><span>con gas.</span></h1>
+      <a href="#sabores" class="btn">Conoce los sabores</a>
+    </div>
+    <p class="drag">Arrastra para girar</p>
+  </section>
+
+  <section class="flavors" id="sabores">
+    <div class="flavors__sticky" id="fSticky">
+      <p class="fword" id="fWord" aria-hidden="true">MORADA</p>
+      <div class="fcan" id="fCan"></div>
+      <div class="finfo">
+        <p class="fnum" id="fNum">01 / 04</p>
+        <h2 id="fName"></h2>
+        <p id="fNotes"></p>
+        <ul class="fchips"><li id="fKcal"></li><li>Sin colorantes</li><li>Endulzado con stevia</li></ul>
+      </div>
+      <div class="fnav" id="fNav"></div>
+    </div>
+  </section>
+
+  <section class="pack" id="pack">
+    <div class="wrap pack__grid">
+      <div>
+        <h2 class="rv">Arma tu <span>pack.</span></h2>
+        <p class="rv" style="--i:1" id="delivery"></p>
+        <div class="sizes rv" style="--i:2" id="sizes"></div>
+        <div class="mix" id="mix"></div>
+      </div>
+      <div class="tray-wrap rv" style="--i:2">
+        <div class="tray" id="tray"></div>
+        <div class="tray__foot">
+          <div><span id="trayState"></span><b id="trayPrice">S/ 0</b></div>
+          <button class="btn btn--dark" id="orderPack">Pedir por WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dist" id="distribuidor">
+    <div class="wrap dist__grid">
+      <div>
+        <h2 class="rv">¿Tienes bodega,<br>restaurante o <span>minimarket?</span></h2>
+        <p class="rv" style="--i:1">Véndenos en tu local con precio mayorista, exhibidor gratis y reposición cada semana.</p>
+        <ul class="stats">
+          <li class="rv" style="--i:2"><b data-count="340">0</b><span>puntos de venta</span></li>
+          <li class="rv" style="--i:3"><b data-count="35">0</b><span>% de margen promedio</span></li>
+        </ul>
+      </div>
+      <form class="form rv" id="distForm" style="--i:2">
+        <label>Nombre del negocio<input name="negocio" required placeholder="Bodega Doña Rosa"></label>
+        <label>Ciudad / distrito<input name="ciudad" required placeholder="El Tambo, Huancayo"></label>
+        <label>Tipo de negocio<select name="tipo"><option>Bodega</option><option>Minimarket</option><option>Restaurante</option><option>Cafetería</option><option>Gimnasio</option><option>Otro</option></select></label>
+        <label>Cajas al mes (aprox.)<select name="cajas"><option>1 a 5</option><option>6 a 20</option><option>Más de 20</option></select></label>
+        <button class="btn btn--dark">Quiero ser distribuidor</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="foot"><p class="foot__word">KAUSAY</p><div class="wrap foot__row"><span>Kausay significa "vida" en quechua.</span><a href="#" id="waFoot">WhatsApp</a><span>Demo ficticia · 2026</span></div></footer>
+  <div class="toast" id="toast"></div>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

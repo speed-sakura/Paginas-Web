@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wayta · Conservas andinas del valle del Mantaro</title>
+  <meta name="description" content="Mermeladas, cremas y conservas artesanales del valle del Mantaro. Arma tu caja de regalo y pide por WhatsApp.">
+  <meta name="theme-color" content="#f4ede2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <nav class="nav__side"><a href="#tienda">Tienda</a><a href="#caja">Caja de regalo</a></nav>
+    <a href="#" class="logo" aria-label="Wayta inicio"><svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><path d="M20 4c6 6 6 12 0 16-6-4-6-10 0-16zM20 20c8-2 14 2 16 8-8 2-14-2-16-8zM20 20c-8-2-14 2-16 8 8 2 14-2 16-8z" fill="#c8261f"/><circle cx="20" cy="20" r="3" fill="#f2c21b"/></svg><span>Wayta</span></a>
+    <button class="box-btn" id="boxBtn">Mi caja <b id="boxCount">0</b></button>
+  </header>
+
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <svg class="ring" viewBox="0 0 400 400" aria-hidden="true"><defs><path id="circ" d="M200 200m-170 0a170 170 0 1 1 340 0a170 170 0 1 1-340 0"/></defs><text><textPath href="#circ" startOffset="0">SIRVE · COMPARTE · DISFRUTA · HECHO EN EL MANTARO · SIRVE · COMPARTE · </textPath></text></svg>
+    <div class="jars" id="heroJars"></div>
+    <div class="hero__copy">
+      <h1><span>Sabores de la sierra,</span> <em>en frasco.</em></h1>
+      <p>Mermeladas y cremas hechas a mano con fruta y ají del valle del Mantaro.</p>
+      <a href="#tienda" class="btn">Elegir sabores</a>
+    </div>
+    <p class="hint">Toca un frasco</p>
+  </section>
+
+  <!-- Vista rápida -->
+  <div class="quick" id="quick" role="dialog" aria-modal="true" aria-labelledby="qName" hidden>
+    <div class="quick__card">
+      <button class="quick__close" id="qClose" aria-label="Cerrar">✕</button>
+      <div class="quick__jar" id="qJar"></div>
+      <div><p class="kind" id="qKind"></p><h3 id="qName"></h3><p id="qDesc"></p><div class="quick__row"><b id="qPrice"></b><button class="btn" id="qAdd">Agregar a mi caja</button></div></div>
+    </div>
+  </div>
+
+  <section class="story">
+    <div class="wrap story__grid">
+      <h2 class="rv">De la chacra al frasco <em>en menos de 48 horas.</em></h2>
+      <div class="story__side">
+        <p class="rv" style="--i:1">Compramos la fruta directo a 40 familias de Concepción, Jauja y Chupaca. Cocinamos en ollas pequeñas, sin conservantes ni colorantes, y sellamos al vacío.</p>
+        <ul class="nums">
+          <li class="rv" style="--i:2"><b data-count="40">0</b><span>familias productoras</span></li>
+          <li class="rv" style="--i:3"><b data-count="0">0</b><span>conservantes</span></li>
+          <li class="rv" style="--i:4"><b data-count="12">0</b><span>meses de duración</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop" id="tienda">
+    <div class="wrap">
+      <div class="shop__head"><h2 class="rv">Nuestros <em>sabores</em></h2>
+        <div class="filters rv" style="--i:1" id="filters"><button aria-pressed="true" data-f="todos">Todos</button><button aria-pressed="false" data-f="dulce">Dulces</button><button aria-pressed="false" data-f="picante">Picantes</button></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="box" id="caja">
+    <div class="wrap box__grid">
+      <div>
+        <h2 class="rv">Arma tu <em>caja de regalo.</em></h2>
+        <p class="rv" style="--i:1">Elige el tamaño, toca los sabores y la llenamos con papel de seda y una tarjeta escrita a mano.</p>
+        <div class="sizes rv" style="--i:2" id="sizes"></div>
+        <div class="picker rv" style="--i:3" id="picker"></div>
+      </div>
+      <div class="crate-wrap rv" style="--i:2">
+        <div class="crate" id="crate"></div>
+        <div class="crate__info">
+          <div class="crate__price"><span id="crateState"></span><b id="crateTotal">S/ 0</b><s id="crateOld"></s></div>
+          <label class="msg">Mensaje para la tarjeta<input id="cardMsg" maxlength="80" placeholder="¡Feliz Navidad, familia!"></label>
+          <button class="btn btn--full" id="orderBox">Pedir por WhatsApp</button>
+          <button class="link" id="clearBox">Vaciar caja</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recipes">
+    <div class="wrap">
+      <h2 class="rv">Ideas para <em>servir</em></h2>
+      <div class="rec-grid">
+        <article class="rec rv" style="--i:0;--c:#f39a1e"><span>01</span><h3>Tabla de quesos andina</h3><p>Queso fresco de Jauja, mermelada de aguaymanto y nueces tostadas.</p></article>
+        <article class="rec rv" style="--i:1;--c:#4f7d2b"><span>02</span><h3>Papas a la huacatay</h3><p>Papa nativa sancochada con salsa de huacatay y huevo duro.</p></article>
+        <article class="rec rv" style="--i:2;--c:#4a1d4f"><span>03</span><h3>Cheesecake de sauco</h3><p>Base de galleta de kiwicha y cobertura de mermelada de sauco.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="stores">
+    <div class="wrap"><h2 class="rv">Dónde <em>encontrarnos</em></h2><ul id="stores"></ul></div>
+  </section>
+
+  <footer class="foot"><div class="foot__word">Wayta</div><div class="wrap foot__row"><span>Conservas andinas · Huancayo, Perú</span><a href="#" id="waFoot">WhatsApp</a><span>Demo ficticia · 2026</span></div></footer>
+  <div class="toast" id="toast"></div>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

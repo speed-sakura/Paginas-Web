@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Calle 64 · Ropa urbana hecha en Huancayo</title>
+  <meta name="description" content="Casacas, poleras y joggers de edición limitada hechos en Huancayo. Bordado con tu nombre y pedido por WhatsApp.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#" class="logo">CALLE<b>64</b></a>
+    <nav class="nav__links"><a href="#drop">Drop</a><a href="#nombre">Tu nombre</a><a href="#tienda">Tienda</a><a href="#look">Lookbook</a></nav>
+    <button class="bag-btn" id="bagBtn">Bolsa (<span id="bagCount">0</span>)</button>
+  </header>
+
+  <section class="hero" id="drop">
+    <div class="hero__neon" aria-hidden="true"></div>
+    <div class="hero__fog" aria-hidden="true"></div>
+    <div class="hero__trio" id="trio"></div>
+    <div class="hero__copy">
+      <p class="badge"><i></i><span id="dropName"></span></p>
+      <h1 class="hero__title"><span>NACIDO</span> <span>EN LA</span> <span class="red">CALLE.</span></h1>
+      <div class="count" id="count" aria-live="polite"></div>
+      <div class="hero__btns"><a href="#tienda" class="btn btn--red">Comprar el drop</a><a href="#nombre" class="btn btn--line">Bórdale tu nombre</a></div>
+    </div>
+    <p class="hero__foot"><span>Hecho en Huancayo · 064</span><span>Edición limitada · 120 piezas</span></p>
+  </section>
+
+  <section class="kinetic" id="nombre">
+    <div class="kinetic__rows" aria-hidden="true">
+      <div class="krow" data-dir="1"></div>
+      <div class="krow krow--solid" data-dir="-1"></div>
+      <div class="krow" data-dir="1"></div>
+      <div class="krow krow--solid" data-dir="-1"></div>
+      <div class="krow" data-dir="1"></div>
+    </div>
+    <div class="kinetic__jacket" id="kJacket"></div>
+    <div class="kinetic__ui">
+      <label for="nameInput">Toca y escribe tu nombre</label>
+      <input id="nameInput" maxlength="12" placeholder="CALLE 64" autocomplete="off">
+      <p>Lo bordamos en la espalda de tu casaca por <b id="embPrice"></b>.</p>
+    </div>
+  </section>
+
+  <section class="manifest">
+    <div class="wrap manifest__grid">
+      <p class="manifest__num rv">064</p>
+      <div>
+        <h2 class="rv">No copiamos tendencias. <span class="red">Las cosemos.</span></h2>
+        <p class="rv" style="--i:1">Cada pieza se corta y cose en un taller de El Tambo, con tela gruesa que aguanta el frío de la sierra. Tiradas cortas: cuando se acaba un drop, no vuelve.</p>
+        <ul class="facts">
+          <li class="rv" style="--i:2"><b>380 g</b><span>algodón french terry</span></li>
+          <li class="rv" style="--i:3"><b>120</b><span>piezas por drop</span></li>
+          <li class="rv" style="--i:4"><b>48 h</b><span>envío a todo Perú</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop" id="tienda">
+    <div class="wrap">
+      <div class="shop__head"><h2 class="rv">LA <span class="red">TIENDA</span></h2><p class="rv" style="--i:1">Elige color y talla. Pagas con Yape, Plin o transferencia al confirmar por WhatsApp.</p></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="look" id="look">
+    <div class="look__sticky">
+      <h2 class="look__title">LOOK<span class="red">BOOK</span></h2>
+      <div class="look__track" id="lookTrack"></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot__big">CALLE<span class="red">64</span></div>
+    <div class="wrap foot__row"><span>Jr. Puno 512, Huancayo (ejemplo)</span><a href="#" id="waFoot">WhatsApp</a><span>Demo ficticia · 2026</span></div>
+  </footer>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="bag" id="bag" aria-label="Bolsa de compras">
+    <div class="bag__head"><b>TU BOLSA</b><button id="closeBag" aria-label="Cerrar">✕</button></div>
+    <div class="bag__items" id="bagItems"></div>
+    <div class="bag__foot"><div class="sum"><span>Total</span><b id="bagTotal">S/ 0</b></div><button class="btn btn--red" id="checkout">Pedir por WhatsApp</button></div>
+  </aside>
+  <div class="toast" id="toast"></div>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
