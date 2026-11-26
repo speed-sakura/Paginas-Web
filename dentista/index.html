@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Illari Dental · Clínica dental en Huancayo y Lima</title>
+  <meta name="description" content="Clínica dental en Huancayo y Lima. Ortodoncia, alineadores invisibles, implantes, blanqueamiento y carillas. Reserva tu cita por WhatsApp.">
+  <meta name="theme-color" content="#050607">
+  <meta property="og:title" content="Illari Dental · Tu mejor sonrisa empieza aquí">
+  <meta property="og:description" content="Odontología de nueva generación en Huancayo y Lima. Reserva por WhatsApp.">
+  <meta property="og:image" content="../img/dentista.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navegación -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c-3 0-4.5 1.6-7 1.6C5.6 5.6 4 8.4 4 12c0 4.4 2 6.6 3 11 .7 3 1.6 5 3.3 5 2.4 0 2-7.5 5.7-7.5s3.3 7.5 5.7 7.5c1.7 0 2.6-2 3.3-5 1-4.4 3-6.6 3-11 0-3.6-1.6-6.4-5-6.4-2.5 0-4-1.6-7-1.6z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="21.5" cy="10" r="2" fill="var(--accent)"/></svg>
+      <span data-name>Illari Dental</span>
+    </a>
+    <nav class="pill" aria-label="Secciones">
+      <a href="#tratamientos">Tratamientos</a>
+      <a href="#sonrisa">Simulador</a>
+      <a href="#cuotas">Cuotas</a>
+      <a href="#equipo">Especialistas</a>
+      <a href="#sedes">Sedes</a>
+    </nav>
+    <a class="btn btn--accent btn--sm" href="#reserva">Reservar cita <span class="arrow" aria-hidden="true">↗</span></a>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false" id="burger"><span></span><span></span></button>
+  </header>
+  <div class="sheet" id="sheet" hidden>
+    <a href="#tratamientos">Tratamientos</a>
+    <a href="#sonrisa">Simulador de sonrisa</a>
+    <a href="#cuotas">Pago en cuotas</a>
+    <a href="#equipo">Especialistas</a>
+    <a href="#sedes">Sedes</a>
+    <a class="btn btn--accent" href="#reserva">Reservar cita ↗</a>
+  </div>
+
+  <main>
+    <!-- Portada -->
+    <section class="hero" id="inicio">
+      <canvas id="tooth" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__inner wrap">
+        <p class="eyebrow fade" style="--d:.2s"><span class="dot"></span>Citas hoy en Huancayo y Lima</p>
+        <h1 class="reveal" data-words>Tu mejor sonrisa<br>empieza aquí</h1>
+        <p class="hero__sub fade" style="--d:.9s">Odontología digital, sin dolor y con precios claros. Ortodoncia, implantes y blanqueamiento con especialistas certificados.</p>
+        <div class="hero__row fade" style="--d:1.05s">
+          <div class="hero__cta">
+            <a class="btn btn--accent" href="#reserva">Reservar cita <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="btn btn--ghost" href="#tratamientos"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7-4.5z" fill="currentColor"/></svg>Ver tratamientos</a>
+          </div>
+          <div class="pay">
+            <span>Pagas con:</span>
+            <i title="Yape">Y</i><i title="Plin">P</i><i title="Visa">V</i><i title="Cuotas">%</i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cifras -->
+    <section class="stats wrap" id="stats" aria-label="Cifras"></section>
+
+    <!-- Tratamientos -->
+    <section class="section wrap" id="tratamientos">
+      <div class="head">
+        <p class="kicker in">Tratamientos</p>
+        <h2 class="in">Todo lo que tu sonrisa necesita, <span class="soft">en un solo lugar.</span></h2>
+        <p class="in muted">Precios de referencia. Tu presupuesto final se define en la evaluación.</p>
+      </div>
+      <div class="bento" id="bento"></div>
+    </section>
+
+    <!-- Simulador -->
+    <section class="section wrap sim" id="sonrisa">
+      <div class="sim__text">
+        <p class="kicker in">Simulador</p>
+        <h2 class="in">Mira qué tan blanca <span class="soft">puede quedar.</span></h2>
+        <p class="in muted">Mueve la barra para ver el cambio de tono que logra nuestro blanqueamiento LED en una sola sesión.</p>
+        <div class="shade in">
+          <div class="shade__top"><span>Tono actual</span><b id="shadeLabel">A3 · natural</b></div>
+          <input type="range" id="shade" min="0" max="100" value="0" aria-label="Nivel de blanqueamiento">
+          <div class="shade__scale"><span>Antes</span><span>Después</span></div>
+        </div>
+        <a class="btn btn--accent in" href="#reserva" data-pick="blanqueamiento">Quiero este resultado <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+      <div class="sim__visual in">
+        <svg viewBox="0 0 440 260" id="smile" role="img" aria-label="Simulación de una sonrisa">
+          <defs>
+            <linearGradient id="gum" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9768b"/><stop offset="1" stop-color="#b9475d"/></linearGradient>
+            <radialGradient id="toothShine" cx=".35" cy=".25" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></radialGradient>
+            <clipPath id="mouth"><path d="M30 92 Q220 10 410 92 Q330 248 220 248 Q110 248 30 92Z"/></clipPath>
+          </defs>
+          <path d="M30 92 Q220 10 410 92 Q330 248 220 248 Q110 248 30 92Z" fill="#2a0d14"/>
+          <g clip-path="url(#mouth)">
+            <g id="teeth"></g>
+            <path d="M0 0H440V92 Q220 30 0 92Z" fill="url(#gum)"/>
+          </g>
+          <path d="M30 92 Q220 10 410 92 Q330 248 220 248 Q110 248 30 92Z" fill="none" stroke="#d26a7c" stroke-width="10" stroke-linejoin="round"/>
+        </svg>
+        <div class="sim__badge"><b id="shadeGain">+0</b><span>tonos más blanco</span></div>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="section wrap" id="proceso">
+      <div class="head">
+        <p class="kicker in">Tu primera visita</p>
+        <h2 class="in">Simple, rápida <span class="soft">y sin sorpresas.</span></h2>
+      </div>
+      <ol class="steps">
+        <li class="in"><span>01</span><b>Reservas por WhatsApp</b><p>Eliges sede, día y turno. Te confirmamos en minutos.</p></li>
+        <li class="in"><span>02</span><b>Escaneo 3D y radiografía</b><p>Vemos tu boca en pantalla, sin moldes incómodos.</p></li>
+        <li class="in"><span>03</span><b>Plan y presupuesto</b><p>Te damos el precio exacto y opciones de cuotas.</p></li>
+        <li class="in"><span>04</span><b>Empiezas el mismo día</b><p>Si quieres, iniciamos tu tratamiento en la misma cita.</p></li>
+      </ol>
+    </section>
+
+    <!-- Cuotas -->
+    <section class="section wrap" id="cuotas">
+      <div class="calc in">
+        <div class="calc__text">
+          <p class="kicker">Pago en cuotas</p>
+          <h2>Tu tratamiento, <span class="soft">a tu ritmo.</span></h2>
+          <p class="muted">Calcula cuánto pagarías al mes. Sin intereses con tarjeta o en cuotas directas con la clínica.</p>
+        </div>
+        <div class="calc__box">
+          <label class="lbl" for="calcT">Tratamiento</label>
+          <div class="select"><select id="calcT"></select></div>
+          <span class="lbl">Número de cuotas</span>
+          <div class="seg" id="calcM" role="radiogroup" aria-label="Número de cuotas"></div>
+          <div class="calc__out">
+            <span>Pagarías</span>
+            <b><small>S/</small> <span id="calcOut">0</span></b>
+            <span>al mes · total <span id="calcTotal">S/ 0</span></span>
+          </div>
+          <a class="btn btn--accent btn--full" href="#reserva" id="calcGo">Separar evaluación <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="section wrap" id="equipo">
+      <div class="head">
+        <p class="kicker in">Especialistas</p>
+        <h2 class="in">Manos expertas <span class="soft">que te explican todo.</span></h2>
+      </div>
+      <div class="team" id="team"></div>
+    </section>
+
+    <!-- Opiniones -->
+    <section class="section reviews" aria-label="Opiniones de pacientes">
+      <div class="wrap head">
+        <p class="kicker in">Pacientes</p>
+        <h2 class="in">4.9 de 5 <span class="soft">en Google.</span></h2>
+      </div>
+      <div class="marquee"><div class="marquee__track" id="reviews"></div></div>
+    </section>
+
+    <!-- Reserva -->
+    <section class="section wrap" id="reserva">
+      <div class="book in">
+        <div class="book__text">
+          <p class="kicker">Reserva</p>
+          <h2>Separa tu cita <span class="soft">en 30 segundos.</span></h2>
+          <p class="muted">Completa tus datos y te llega todo ordenado a nuestro WhatsApp. Te confirmamos la hora al instante.</p>
+          <ul class="checks">
+            <li>Evaluación con radiografía digital S/ 40</li>
+            <li>Se descuenta si empiezas tu tratamiento</li>
+            <li>Atención de emergencias el mismo día</li>
+          </ul>
+        </div>
+        <form class="form" id="form" novalidate>
+          <label>Nombre<input name="nombre" autocomplete="name" placeholder="Tu nombre" required></label>
+          <label>Tratamiento<div class="select"><select name="tratamiento" id="formT"></select></div></label>
+          <div class="form__row">
+            <label>Sede<div class="select"><select name="sede" id="formS"></select></div></label>
+            <label>Fecha<input type="date" name="fecha" id="formD" required></label>
+          </div>
+          <span class="lbl">Turno</span>
+          <div class="seg" id="formTurn" role="radiogroup" aria-label="Turno">
+            <button type="button" class="on" aria-pressed="true">Mañana</button>
+            <button type="button" aria-pressed="false">Tarde</button>
+            <button type="button" aria-pressed="false">Noche</button>
+          </div>
+          <button class="btn btn--accent btn--full" type="submit">Enviar por WhatsApp <span class="arrow" aria-hidden="true">↗</span></button>
+          <p class="form__msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Sedes -->
+    <section class="section wrap" id="sedes">
+      <div class="head">
+        <p class="kicker in">Sedes</p>
+        <h2 class="in">Cerca de ti, <span class="soft">en Huancayo y Lima.</span></h2>
+      </div>
+      <div class="places" id="places"></div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section wrap faq" id="faq">
+      <div class="head">
+        <p class="kicker in">Preguntas frecuentes</p>
+        <h2 class="in">Lo que más <span class="soft">nos preguntan.</span></h2>
+      </div>
+      <div id="faqs"></div>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <div class="foot__big" aria-hidden="true" data-name>Illari Dental</div>
+    <div class="foot__row">
+      <span>© <span id="year"></span> <span data-name>Illari Dental</span>. Demo con datos ficticios.</span>
+      <span>Director médico: COP 18733 (ejemplo)</span>
+    </div>
+  </footer>
+
+  <a class="wa" id="wa" href="#" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
