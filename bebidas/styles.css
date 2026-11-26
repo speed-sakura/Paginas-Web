@@ -58,7 +58,7 @@ h2 { font-size: clamp(38px, 6vw, 84px); }
 .hero__copy > * { opacity: 0; transform: translateY(16px); transition: opacity .5s var(--ease), transform .5s var(--ease); }
 .ready .hero__copy > * { opacity: 1; transform: none; }
 .ready .hero__copy h1 { transition-delay: .08s; } .ready .hero__copy .btn { transition-delay: .16s; }
-.drag { position: absolute; bottom: 20px; margin: 0; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.drag { z-index: 2; position: absolute; bottom: 20px; margin: 0; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
 /* Sabores */
 .flavors { height: 500vh; position: relative; }
@@ -132,6 +132,15 @@ h2 { font-size: clamp(38px, 6vw, 84px); }
 .toast { position: fixed; left: 50%; bottom: 24px; z-index: 95; transform: translate(-50%, 12px); opacity: 0; background: #fff; color: #000; padding: 12px 18px; border-radius: 99px; font-size: 14px; transition: .25s var(--ease); pointer-events: none; }
 .toast.show { transform: translate(-50%, 0); opacity: 1; }
 
+/* ---------- Modo 3D ---------- */
+.stage3d { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.cans3d { position: absolute; inset: 0; z-index: 1; cursor: grab; }
+.cans3d:active { cursor: grabbing; }
+.has3d .stage { display: none; }
+.hero__copy { z-index: 2; }
+.has3d .fcan .can { display: none; }
+.fcan3d { width: min(460px, 34vw); aspect-ratio: .72; position: relative; cursor: grab; touch-action: pan-y; }
+
 @media (max-width: 860px) {
   .nav__links { display: none; }
   .carousel { width: 80px; height: 170px; transform: translateY(14vh) rotateX(-8deg) rotateY(var(--ry, 0deg)); }
@@ -144,6 +153,7 @@ h2 { font-size: clamp(38px, 6vw, 84px); }
   .fnav button i { width: 20px; height: 20px; }
   .fcan { grid-column: 1; grid-row: 2; }
   .fcan .can { --w: 120px; }
+  .fcan3d { width: 70vw; height: 42svh; aspect-ratio: auto; }
   .finfo { grid-column: 1; grid-row: 3; padding-bottom: 10px; }
   .finfo h2 { font-size: 32px; margin-bottom: 8px; }
   .finfo p { font-size: 15px; }

@@ -125,6 +125,13 @@ h2 { font-size: clamp(44px, 7vw, 96px); }
 .foot__row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 13px; color: var(--muted); }
 .foot__row a { color: var(--ink); text-decoration: underline; }
 
+/* ---------- Modo 3D ---------- */
+.stage3d { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.has3d .hero__watch { position: absolute; inset: 0; z-index: 2; transform: none !important; opacity: 1; cursor: grab; touch-action: pan-y; }
+.has3d .scenes__watch { width: min(560px, 44vw); aspect-ratio: .8; cursor: grab; touch-action: pan-y; }
+.has3d .straps__watch { aspect-ratio: 1; position: relative; padding: 0; cursor: grab; touch-action: pan-y; }
+.hero__copy, .hero__btn { z-index: 3; }
+
 @media (max-width: 860px) {
   .nav__links { display: none; }
   .nav { grid-template-columns: 1fr auto; }

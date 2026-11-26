@@ -38,6 +38,7 @@
     ["#sTitle", "#sText"].forEach((q) => { const el = $(q); el.classList.remove("swap"); void el.offsetWidth; el.classList.add("swap"); });
     $("#sTitle").textContent = s.title; $("#sText").textContent = s.text;
     sw.querySelectorAll(".face").forEach((f) => f.classList.toggle("on", f.dataset.f === s.screen));
+    window.__scene3d = s; document.dispatchEvent(new CustomEvent("watchscene", { detail: s }));
     document.querySelectorAll(".dots i").forEach((d, k) => d.classList.toggle("on", k === i));
     cancelAnimationFrame(anim);
     const from = shown, to = s.num, t0 = performance.now(), dur = reduce ? 1 : 600;
@@ -63,6 +64,7 @@
   function applyStrap() {
     sWatch.querySelectorAll(".watch__strap").forEach((el) => el.style.setProperty("--strap", strap.color));
     sWatch.style.setProperty("--s", strap.color);
+    window.__strap3d = strap.color; document.dispatchEvent(new CustomEvent("strap3d", { detail: strap.color }));
   }
   $("#strapList").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;

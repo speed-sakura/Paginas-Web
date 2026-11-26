@@ -33,7 +33,7 @@
   function setFlavor(i) {
     if (i === cur) return; cur = i; const f = B.flavors[i];
     sticky.style.setProperty("--fbg", f.bg);
-    fCan.innerHTML = can(f);
+    if (!document.body.classList.contains("has3d")) fCan.innerHTML = can(f);
     fCan.classList.remove("spin"); void fCan.offsetWidth; fCan.classList.add("spin");
     word.textContent = f.word; word.classList.remove("swap"); void word.offsetWidth; word.classList.add("swap");
     $("#fNum").textContent = `${String(i + 1).padStart(2, "0")} / ${String(B.flavors.length).padStart(2, "0")}`;

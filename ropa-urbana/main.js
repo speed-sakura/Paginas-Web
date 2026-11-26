@@ -78,7 +78,8 @@
     myName = input.value.trim().toUpperCase().replace(/[^A-ZÑÁÉÍÓÚ0-9 ]/g, "");
     const word = myName || "CALLE 64";
     rows.forEach((r) => r.textContent = Array(8).fill(word).join(" · ") + " · ");
-    kJ.innerHTML = garment("jacket", "rojo", { back: true, name: word });
+    if (!document.body.classList.contains("has3d")) kJ.innerHTML = garment("jacket", "rojo", { back: true, name: word });
+    window.__name3d = word; document.dispatchEvent(new CustomEvent("name3d", { detail: word }));
   }
   input.addEventListener("input", setName); setName();
   $("#embPrice").textContent = `${soles(S.embroidery)} adicionales`;

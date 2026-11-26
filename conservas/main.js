@@ -31,6 +31,8 @@
 
   // Vista rápida
   const quick = $("#quick"); let qId = null, lastFocus = null;
+  window.__openQuick = (id) => openQuick(id);
+  window.__jarLayout = () => (innerWidth < 760 ? mob : desk);
   function openQuick(id) {
     const p = byId(id); qId = id; lastFocus = document.activeElement;
     $("#qJar").innerHTML = jar(p); $("#qKind").textContent = `${p.kind} · ${p.type}`; $("#qName").textContent = p.name; $("#qDesc").textContent = p.desc; $("#qPrice").textContent = soles(p.price);
